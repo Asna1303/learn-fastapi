@@ -12,3 +12,5 @@ def index():
     return{"name":"First Data"}
 
 @app.get("/get-students/{student_id}")
+def get_student(student_id: int):
+    return students(student_id)
