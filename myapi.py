@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Path
 app=FastAPI()
 students={
     1:{
@@ -13,4 +13,4 @@ def index():
 
 @app.get("/get-students/{student_id}")
 def get_student(student_id: int):
-    return students(student_id)
+    return students[student_id]
