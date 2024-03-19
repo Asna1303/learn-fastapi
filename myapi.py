@@ -22,3 +22,4 @@ def get_student(student_id: int = Path(..., description="the id of the student y
      return students[student_id]
 
 @app.get("/get-by-name")
+def get_student(name:string)
