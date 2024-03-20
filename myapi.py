@@ -13,7 +13,7 @@ students = {
         "class": "year 12"
     }
 }
-class student(BaseModel):
+class Student(BaseModel):
     name: str
     age: int
     year: str
@@ -35,3 +35,4 @@ def get_student(*,student_id:int,name:Optional[str]= None,test : int):
     return {"data": "Not found"}
 
 @app.post("/create-student/{student_id}")
+def create_student(student_id:int, student: Student)
