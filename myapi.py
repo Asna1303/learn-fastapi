@@ -35,4 +35,6 @@ def get_student(*,student_id:int,name:Optional[str]= None,test : int):
     return {"data": "Not found"}
 
 @app.post("/create-student/{student_id}")
-def create_student(student_id:int, student: Student)
+def create_student(student_id:int, student: Student):
+    if student_id in students:
+        return {"Error" : "Student exixts"}
