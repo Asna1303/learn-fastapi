@@ -33,3 +33,5 @@ def get_student(*,student_id:int,name:Optional[str]= None,test : int):
         if students[student_id]["name"] == name:
             return students[student_id]
     return {"data": "Not found"}
+
+@app.post("/create-student/{student_id}")
